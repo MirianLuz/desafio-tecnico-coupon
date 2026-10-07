@@ -1,3 +1,27 @@
 spring:
-  application:
-    name: coupon-api
+  datasource:
+    url: jdbc:h2:mem:coupon_db;DB_CLOSE_DELAY=-1;NON_KEYWORDS=KEY,VALUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+        trace: false
+
+logging:
+  level:
+    root: INFO
+    com.coupon.desafio.coupon: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG
