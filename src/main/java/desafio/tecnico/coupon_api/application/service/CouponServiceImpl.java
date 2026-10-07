@@ -1,8 +1,15 @@
 package desafio.tecnico.coupon_api.application.service;
 
 
+import desafio.tecnico.coupon_api.application.dto.CouponRequest;
 import desafio.tecnico.coupon_api.application.dto.CouponResponse;
+import desafio.tecnico.coupon_api.application.usecase.CouponUseCases;
 import desafio.tecnico.coupon_api.domain.entity.Coupon;
+import desafio.tecnico.coupon_api.domain.exceptions.CouponAlreadyExistsException;
+import desafio.tecnico.coupon_api.domain.exceptions.CouponNotFoundException;
+import desafio.tecnico.coupon_api.domain.repository.CouponRepository;
+import desafio.tecnico.coupon_api.infrastructure.mapper.CouponMapper;
+import desafio.tecnico.coupon_api.presentation.controller.CouponController;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
