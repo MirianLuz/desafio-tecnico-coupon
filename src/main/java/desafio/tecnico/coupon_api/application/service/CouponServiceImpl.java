@@ -10,7 +10,6 @@ import desafio.tecnico.coupon_api.domain.exceptions.CouponNotFoundException;
 import desafio.tecnico.coupon_api.domain.repository.CouponRepository;
 import desafio.tecnico.coupon_api.infrastructure.mapper.CouponMapper;
 import desafio.tecnico.coupon_api.presentation.controller.CouponController;
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
